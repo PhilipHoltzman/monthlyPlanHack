@@ -47,7 +47,7 @@ print('Group name: ' + str(sheet['F1'].value))
 # B 14 needs oral exam + 1 random
 # B 15 needs written quiz and 1 random
 
-sheet['B8'] =  ' Weekend Recap / '  + 'Begin monthly Unit' + str(random.choice(podcastList))
+sheet['B8'] =  ' Weekend Recap / '  + 'Begin monthly Unit' + str(random.choice(podcastList)) # delete this!!!
 sheet['B9'] =  ' Week Discussion /' + 'Listening Exercise and Discussion'
 sheet['B10'] = ' Weekend Recap / '  + 'Continue Unit / Short Documentary / Short discussion'
 sheet['B11'] = ' Week Discussion /' + 'Science article reading exercise and short Science Documentary'
