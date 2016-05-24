@@ -1,15 +1,15 @@
 #!python3 
-# monthlyPlanHack.py - a simplie tool to generate xlsx monthly 
+# monthlyPlanHack.py - a simple tool to generate xlsx monthly 
 # plans for my stupid job for jerks
 
 import openpyxl
 import random
 
 newsOutlet = ['BBC', 'Vice News', 'New York Times',
-                'New Yorker', 
+                'New Yorker', 'Iberian Times',
                 'BBC World', 'CNN Online', 'San Francisco Chronicle']
 
-podcastList = ['NPR', 'This American Life', 'Radiolab', 'In our time']
+podcastList = ['NPR', 'This American Life', 'Radiolab', 'In our time', 'Sword and Scale']
 
 scienceOutlet = ['National Geographic', 'Motherboard', 'PLOS Science Journal',
                 'BBC Science', 'BBC Science']         
@@ -18,7 +18,7 @@ scienceOutlet = ['National Geographic', 'Motherboard', 'PLOS Science Journal',
 youtubeChanel = ['Vice', 'Vox', 'Motherboard', 'Journeyman Pictures',
                 'Science Friday']
 
-authors = ['Tolkien', 'H.P. Lovecraft', 'Henry Thoreaux', '']
+authors = ['Tolkien', 'H.P. Lovecraft', 'Henry Thoreaux', 'Edgar Allen Poe', 'George RR Martin']
 
 
 
@@ -73,12 +73,12 @@ sheet['C15'] = ''
 # D 8-15 needs random 'pg number' or media
 
 sheet['D8'] =  'pg. XXX'
-sheet['D9'] =  
+sheet['D9'] =   str(random.choice(podcastList)) + ' podcast'
 sheet['D10'] = 'pg. XXX'
-sheet['D11'] = 
-sheet['D12'] = 
+sheet['D11'] =  str(random.choice(youtubeChanel)) + ' science short documentary'
+sheet['D12'] =  str(random.choice(newsOutlet)) + ' news article'
 sheet['D13'] = 'pg. XXX'
-sheet['D14'] = 
+sheet['D14'] = str(random.choice(newsOutlet)) + ' news article analysis'
 sheet['D15'] = 'pg. XXX'
 
 # E 8-15 needs a 'put into practice'
