@@ -35,7 +35,14 @@ youtubeChanel = ['Vice', 'Vox', 'Motherboard', 'Journeyman Pictures',
 
 authors = ['Tolkien', 'H.P. Lovecraft', 'Henry Thoreaux', 'Edgar Allen Poe', 'George RR Martin']
 
-
+tNewsOutlet = str(random.choice(newsOutlet))
+tNewsOutlet2 = str(random.choice(newsOutlet))
+tPodcastList = str(random.choice(podcastList))
+tScienceOutlet = str(random.choice(scienceOutleti))
+tScienceOutlet2 = str(random.choice(scienceOutleti))
+tYoutubeChanel = str(random.choice(youtubeChanel))
+tYoutubeChanel2 = str(random.choice(youtubeChanel))
+tAuthors = str(random.choice(authors))
 
 # columns is 18, with filler spaces 
 
@@ -75,6 +82,7 @@ sheet['B15'] = ' Week Discussion /' + 'Unit activity and Written Quiz'
 # C 8-15 needs weekend recap + week discussion + 2 verb desc random
 # C 14 needs oral exam + 1 verb desc random
 # C 15 needs written quiz and 1 verb desc random
+# Exposure/Grammar
 
 sheet['C8'] =  ''
 sheet['C9'] =  ''
@@ -88,12 +96,12 @@ sheet['C15'] = ''
 # D 8-15 needs random 'pg number' or media
 
 sheet['D8'] =  'pg. XXX'
-sheet['D9'] =   str(random.choice(podcastList)) + ' podcast'
+sheet['D9'] =   tPodcastList + ' podcast'
 sheet['D10'] = 'pg. XXX'
-sheet['D11'] =  str(random.choice(youtubeChanel)) + ' science short documentary'
-sheet['D12'] =  str(random.choice(newsOutlet)) + ' news article'
+sheet['D11'] =  tYoutubeChanel + ' science short documentary'
+sheet['D12'] =  tNewsOutlet + ' news article'
 sheet['D13'] = 'pg. XXX'
-sheet['D14'] = str(random.choice(newsOutlet)) + ' news article analysis'
+sheet['D14'] = tNewsOutlet2 + ' news article analysis'
 sheet['D15'] = 'pg. XXX'
 
 # E 8-15 needs a 'put into practice'
