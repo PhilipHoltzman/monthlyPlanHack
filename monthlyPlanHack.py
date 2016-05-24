@@ -2,6 +2,21 @@
 # monthlyPlanHack.py - a simple tool to generate xlsx monthly 
 # plans for my stupid job for jerks
 
+
+# TODO : assign random variables to a 8 temporary and instance specific variables to the template so that I dont generate a random
+# variable with each row/column, which would make the monthly plan nonsense
+
+# finish the C and E columns with template sentences
+
+# create more sources for videos and news
+
+# figure out how to draw those lines and put in the ahpla logo ->  https://openpyxl.readthedocs.io/en/default/usage.html#inserting-an-image
+
+# generate random links for column F for random sources
+
+
+
+
 import openpyxl
 import random
 
