@@ -5,13 +5,13 @@
 
 # TODO : 
 
-# finish E columns with template sentences
-
 # figure out how to draw those lines and put in the ahpla logo ->  https://openpyxl.readthedocs.io/en/default/usage.html#inserting-an-image
 
 # generate random links for column F for random sources
 
 # Weekly random day generators, further obfuscating my generated lesson plans
+
+# randomize key areas to further obfuscate
 
 
 
@@ -19,6 +19,8 @@
 import openpyxl
 import random
 
+
+# media sources
 newsOutlet = ['BBC', 'Vice News', 'New York Times',
                 'New Yorker', 'Iberian Times',
                 'BBC World', 'CNN Online', 'San Francisco Chronicle', 'Reddit World News']
@@ -33,6 +35,20 @@ youtubeChanel = ['Vice', 'Vox', 'Motherboard', 'Journeyman Pictures',
 
 authors = ['Tolkien', 'H.P. Lovecraft', 'Henry Thoreaux', 'Edgar Allen Poe', 'George RR Martin', 'Isaac Asimov']
 
+# topics
+
+scienceTopic = ['','','','','','','','','']
+
+politicalTopic = ['','','','','','','','','']
+
+technologyTopic = ['','','','','','','','','']
+
+themeTopic = ['','','','','','','','','']
+
+lit = ['short story', 'poem']
+
+# temporary choices
+
 tNewsOutlet = str(random.choice(newsOutlet))
 tNewsOutlet2 = str(random.choice(newsOutlet))
 tPodcastList = str(random.choice(podcastList))
@@ -41,6 +57,13 @@ tScienceOutlet2 = str(random.choice(scienceOutleti))
 tYoutubeChanel = str(random.choice(youtubeChanel))
 tYoutubeChanel2 = str(random.choice(youtubeChanel))
 tAuthors = str(random.choice(authors))
+
+tScienceTopic = str(random.choice(scienceTopic))
+tPoliticalTopic = str(random.choice(politicalTopic))
+tThemeTopic = str(random.choice(themeTopicthe))
+tTechnologyTopic = str(random.choice(technologyTopic))
+
+tLit = str(random.choice(lit))
 
 # columns is 18, with filler spaces 
 
@@ -104,14 +127,14 @@ sheet['D15'] = 'pg. XXX'
 
 # E 8-15 needs a 'put into practice'
 
-sheet['E8'] =  ''
-sheet['E9'] =  ''
-sheet['E10'] = ''
-sheet['E11'] = ''
-sheet['E12'] = ''
-sheet['E13'] = ''
-sheet['E14'] = ''
-sheet['E15'] = ''
+sheet['E8'] =  'Students will read and discuss passages in the book, ask questions, and review key business terms' # randomize these in future
+sheet['E9'] =  'Listen to the ' + tPodcastList + ' on ' + tScienceTopic   # randomize these tTopics
+sheet['E10'] = 'Writing exercise on current Unit and watch a documentary on ' + tPoliticalTopic 
+sheet['E11'] = 'Review an article from ' + tScienceOutlet + ' about ' + tScienceTopic
+sheet['E12'] = 'Read an article from ' + tNewsOutlet + ' regarding ' + tThemeTopic 
+sheet['E13'] = 'After working on Unit, watch a quick ' + tYoutubeChanel + ' on ' + tTechnologyTopic
+sheet['E14'] = 'Conduct a short Oral Exam and then analyze a ' + tLit + ' by ' + tAuthors 
+sheet['E15'] = 'Complete the Monthly activity and review the months work, and short written quiz' # randomize these in future
 
 # F 8-15 needs corresponding sources
 
