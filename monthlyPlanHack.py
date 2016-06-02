@@ -5,7 +5,6 @@
 
 # TODO : 
 
-# figure out how to draw those lines and put in the ahpla logo ->  https://openpyxl.readthedocs.io/en/default/usage.html#inserting-an-image
 
 # generate random links for column F for random sources
 
@@ -13,12 +12,17 @@
 
 # randomize key areas to further obfuscate
 
+# figure out how to draw those border/ underlines ->  http://openpyxl.readthedocs.io/en/default/styles.html#introduction
+
+
 
 
 
 import openpyxl
 from openpyxl.drawing.image import Image
+from openpyxl.styles import PatternFill, Border, Side, Alignment, Protection, Font
 import random
+
 
 
 # media sources
@@ -38,11 +42,35 @@ authors = ['Tolkien', 'H.P. Lovecraft', 'Henry Thoreaux', 'Edgar Allen Poe', 'Ge
 
 # topics
 
-scienceTopic = ['','','','','','','','','']
+scienceTopic = ['Genetic Engineering',
+				'Climate Change',
+				'Space Travel',
+				'Disease',
+				'Robotics',
+				'Marine Biology',
+				'Chemistry',
+				'Pollution',
+				'Medical Technology']
 
-politicalTopic = ['','','','','','','','','']
+politicalTopic =   ['Presidential Election',
+					'Border Control',
+					'Drug Policy',
+					'Mexican Policy',
+					'Middle East Conflict',
+					'Refugee Situation in Europe',
+					'Racism and Hate groups',
+					'Womens Rights',
+					'Political Corruption']
 
-technologyTopic = ['','','','','','','','','']
+technologyTopic =  ['Cybersecurity',
+					'Digital Privacy',
+					'Social Media',
+					'Emergent Technologies',
+					'Encryption',
+					'Establishing an online presence',
+					'Protecting Children online',
+					'History of the Internet',
+					'Online resources for teaching yourself']
 
 themeTopic = ['','','','','','','','','']
 
@@ -139,14 +167,38 @@ sheet['E15'] = 'Complete the Monthly activity and review the months work, and sh
 
 # F 8-15 needs corresponding sources
 
-sheet['F8'] =  ''
-sheet['F9'] =  ''
-sheet['F10'] = ''
-sheet['F11'] = ''
-sheet['F12'] = ''
-sheet['F13'] = ''
-sheet['F14'] = ''
-sheet['F15'] = ''
+# sources variables
+
+ytLinksArray = ['https://youtu.be/yQjove0nzss',
+				'https://youtu.be/vw4ybw4yv45',
+				'https://youtu.be/wvtywtwrtyy',
+				'https://youtu.be/3lkl4mmmgo6',
+				'https://youtu.be/zxcb79bssbn',
+				'https://youtu.be/mlen3769b77',
+				'https://youtu.be/bbmvi3ifuv5',
+				'https://youtu.be/nuwhj6vls80',
+				'https://youtu.be/wnkvhkjbb2k',
+				'https://youtu.be/jss0qqv6wwj',
+				'https://youtu.be/nbiuyd5vlk0',
+				'https://youtu.be/dbiegitfv4s',
+				'https://youtu.be/fbiuguie3vv',
+				'https://youtu.be/oiybbb8vk0s',]
+
+ytLink1 = str(random.choice(ytLinksArray))
+ytLink2 = str(random.choice(ytLinksArray))
+
+sheet['F8'] =  'Advanced Business English'
+sheet['F9'] =  tPodcastList + ' Podcast'
+sheet['F10'] = ytLink1
+sheet['F11'] = tScienceOutlet + ' article'
+sheet['F12'] = tNewsOutlet + ' article'
+sheet['F13'] = ytLink2
+sheet['F14'] = tAuthors + ' poem'
+sheet['F15'] = 'Advanced Business English and Teach English Feel Good worksheet'
+
+# outlines 
+
+
 
 # insert ahpla logo
 
