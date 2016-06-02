@@ -17,6 +17,7 @@
 
 
 import openpyxl
+from openpyxl.drawing.image import Image
 import random
 
 
@@ -52,15 +53,15 @@ lit = ['short story', 'poem']
 tNewsOutlet = str(random.choice(newsOutlet))
 tNewsOutlet2 = str(random.choice(newsOutlet))
 tPodcastList = str(random.choice(podcastList))
-tScienceOutlet = str(random.choice(scienceOutleti))
-tScienceOutlet2 = str(random.choice(scienceOutleti))
+tScienceOutlet = str(random.choice(scienceOutlet))
+tScienceOutlet2 = str(random.choice(scienceOutlet))
 tYoutubeChanel = str(random.choice(youtubeChanel))
 tYoutubeChanel2 = str(random.choice(youtubeChanel))
 tAuthors = str(random.choice(authors))
 
 tScienceTopic = str(random.choice(scienceTopic))
 tPoliticalTopic = str(random.choice(politicalTopic))
-tThemeTopic = str(random.choice(themeTopicthe))
+tThemeTopic = str(random.choice(themeTopic))
 tTechnologyTopic = str(random.choice(technologyTopic))
 
 tLit = str(random.choice(lit))
@@ -146,6 +147,12 @@ sheet['F12'] = ''
 sheet['F13'] = ''
 sheet['F14'] = ''
 sheet['F15'] = ''
+
+# insert ahpla logo
+
+logo = Image('ahplalogo.png')
+sheet.add_image(logo,'E27')
+
 
 
 # write the files out
